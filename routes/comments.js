@@ -5,9 +5,9 @@ const commentscontroller = new Commentscontroller();
 const authMiddleware = require('../middleware/auth-middleware');
 
 router.get('/:postId', commentscontroller.getComments); // 댓글보기는 로그인 없이 가능 
-router.post('/:postId', authMiddleware, commentscontroller.postComment);
-router.put('/:commentId', authMiddleware, commentscontroller.putComment);
-router.delete('/:commentId', authMiddleware, commentscontroller.deleteComment);
+router.post('/:postId', commentscontroller.postComment);
+router.put('/:commentId', commentscontroller.putComment);
+router.delete('/:commentId', commentscontroller.deleteComment);
 
 module.exports = router;
 
