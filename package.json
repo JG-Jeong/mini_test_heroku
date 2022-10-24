@@ -4,9 +4,9 @@
   "description": "항해99 Node.js 미니 프로젝트 입니다.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
     "test": "jest",
-    "prettify": "prettier --write *.js **/*.js"
+    "prettify": "prettier --write *.js **/*.js",
+    "start": "node dist/app.js",
   },
   "repository": {
     "type": "git",
